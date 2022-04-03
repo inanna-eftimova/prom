@@ -4,6 +4,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { CatalogPageComponent } from './catalog-page/catalog-page.component';
 import { SearchPageComponent } from './search-page/search-page.component';
 import { MyProfilePageComponent } from './my-profile-page/my-profile-page.component';
+import { OffersModule } from '../offers/offers.module';
 
 
 
@@ -15,7 +16,8 @@ import { MyProfilePageComponent } from './my-profile-page/my-profile-page.compon
     MyProfilePageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    OffersModule
   ],
   exports: [
     HomePageComponent,
