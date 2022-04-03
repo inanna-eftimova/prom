@@ -5,6 +5,8 @@ import { CatalogPageComponent } from './catalog-page/catalog-page.component';
 import { SearchPageComponent } from './search-page/search-page.component';
 import { MyProfilePageComponent } from './my-profile-page/my-profile-page.component';
 import { OffersModule } from '../offers/offers.module';
+import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
+import { SharedRoutingModule } from '../shared/shared-routing..module';
 
 
 
@@ -13,17 +15,20 @@ import { OffersModule } from '../offers/offers.module';
     HomePageComponent,
     CatalogPageComponent,
     SearchPageComponent,
-    MyProfilePageComponent
+    MyProfilePageComponent,
+    NotFoundPageComponent
   ],
   imports: [
     CommonModule,
-    OffersModule
+    OffersModule,
+    SharedRoutingModule
   ],
   exports: [
     HomePageComponent,
     CatalogPageComponent,
     SearchPageComponent,
-    MyProfilePageComponent
+    MyProfilePageComponent,
+    NotFoundPageComponent
   ]
 })
 export class LandingModule { }
