@@ -7,6 +7,7 @@ import { MyProfilePageComponent } from './my-profile-page/my-profile-page.compon
 import { OffersModule } from '../offers/offers.module';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { SharedRoutingModule } from '../shared/shared-routing..module';
+import { LoginMessagePageComponent } from './login-message-page/login-message-page.component';
 
 
 
@@ -16,7 +17,8 @@ import { SharedRoutingModule } from '../shared/shared-routing..module';
     CatalogPageComponent,
     SearchPageComponent,
     MyProfilePageComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    LoginMessagePageComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +30,8 @@ import { SharedRoutingModule } from '../shared/shared-routing..module';
     CatalogPageComponent,
     SearchPageComponent,
     MyProfilePageComponent,
-    NotFoundPageComponent
+    NotFoundPageComponent,
+    LoginMessagePageComponent
   ]
 })
 export class LandingModule { }

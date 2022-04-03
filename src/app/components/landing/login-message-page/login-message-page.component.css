@@ -1,0 +1,10 @@
+.content{
+  height: 72.5vh;
+}
+.alert.alert-primary{
+  width: 600px;
+  margin: 80px auto;
+}
+.button{
+  text-align: center;
+}
