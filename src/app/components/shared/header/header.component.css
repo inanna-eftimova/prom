@@ -1,0 +1,17 @@
+.public_nav{
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.public_nav_elements{
+  display: flex;
+  flex-direction: row;
+}
+@media all and (max-width: 400px){
+  .public_nav{
+    flex-direction: column;
+  }
+  .public_nav_elements{
+    flex-direction: column;
+  }
+}
