@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { SharedRoutingModule } from './shared-routing..module';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,7 @@ import { SharedRoutingModule } from './shared-routing..module';
   ],
   imports: [
     CommonModule,
-    SharedRoutingModule
+    AppRoutingModule
   ],
   exports: [
     HeaderComponent,

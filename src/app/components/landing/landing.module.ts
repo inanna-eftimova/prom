@@ -6,8 +6,8 @@ import { SearchPageComponent } from './search-page/search-page.component';
 import { MyProfilePageComponent } from './my-profile-page/my-profile-page.component';
 import { OffersModule } from '../offers/offers.module';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
-import { SharedRoutingModule } from '../shared/shared-routing..module';
 import { LoginMessagePageComponent } from './login-message-page/login-message-page.component';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 
 
@@ -23,7 +23,7 @@ import { LoginMessagePageComponent } from './login-message-page/login-message-pa
   imports: [
     CommonModule,
     OffersModule,
-    SharedRoutingModule
+    AppRoutingModule
   ],
   exports: [
     HomePageComponent,
