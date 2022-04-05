@@ -5,20 +5,31 @@
         <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" class="img-fluid" alt="Phone image">
       </div>
       <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-        <form>
+        <form [formGroup]="form" (ngSubmit)="login()">
           <h1 class="login-title">Login</h1>
           <!-- Email input -->
           <div class="form-outline mb-4">
-            <input type="email" id="form1Example13" class="form-control form-control-lg" />
+            <input type="email" id="form1Example13" class="form-control form-control-lg" formControlName="email"/>
             <label class="form-label" for="form1Example13">Email address</label>
+          </div>
+          <div *ngIf="f.email.touched && f.email?.value==''" class="alert alert-danger">
+            This field is requied!
+          </div>
+          <div *ngIf="f.email.touched && f.email.errors?.pattern" class="alert alert-danger">
+            Password shoud be of type: example@example.com
           </div>
 
           <!-- Password input -->
           <div class="form-outline mb-4">
-            <input type="password" id="form1Example23" class="form-control form-control-lg" />
+            <input type="password" id="form1Example23" class="form-control form-control-lg" formControlName="password"/>
             <label class="form-label" for="form1Example23">Password</label>
           </div>
-
+          <div *ngIf="f.password.touched && f.password?.value==''" class="alert alert-danger">
+            This field is requied!
+          </div>
+          <div *ngIf="f.password.touched && f.password.errors?.pattern" class="alert alert-danger">
+            Password shoud be min 6 characters!
+          </div>
           <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a routerLink="/register"
             style="color: #393f81;">Register here</a></p>
           
