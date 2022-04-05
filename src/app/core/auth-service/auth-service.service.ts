@@ -25,7 +25,7 @@ export class AuthServiceService {
       onAuthStateChanged(auth, (user) => {
         if (user) {
            uid = user.uid;
-           this.router.navigate(['/profile']);
+           this.router.navigate(['/auth/profile']);
            this.toastr.success('Singed Up', 'Success');
         }
       })
@@ -40,7 +40,7 @@ export class AuthServiceService {
       onAuthStateChanged(auth, (user) => {
         if (user) {
            uid = user.uid;
-           this.router.navigate(['/profile']);
+           this.router.navigate(['/auth/profile']);
            this.toastr.success('Logged In', 'Success');
         }
       })

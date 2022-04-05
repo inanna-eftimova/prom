@@ -10,15 +10,18 @@ import { MyProfilePageComponent } from './components/landing/my-profile-page/my-
 import { NotFoundPageComponent } from './components/landing/not-found-page/not-found-page.component';
 import { SearchPageComponent } from './components/landing/search-page/search-page.component';
 import { CreateFormComponent } from './components/offers/create-form/create-form.component';
+import { AuthGuard } from './components/shared/guards/auth.guard';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent},
   {path: 'login', component: LoginFormComponent},
   {path: 'register', component: RegisterFormComponent},
-  {path: 'create', component: CreateFormComponent},
-  {path: 'search', component: SearchPageComponent},
-  {path: 'profile', component: MyProfilePageComponent},
-  {path: 'catalog', component: CatalogPageComponent},
+  {path: 'auth', children: [
+     {path: 'create', component: CreateFormComponent},
+     {path: 'search', component: SearchPageComponent},
+     {path: 'profile', component: MyProfilePageComponent},
+     {path: 'catalog', component: CatalogPageComponent},
+  ], canActivate: [AuthGuard]},
   {path: 'shoudLogin', component: LoginMessagePageComponent},
   {path: '**', component: NotFoundPageComponent}
 ];
