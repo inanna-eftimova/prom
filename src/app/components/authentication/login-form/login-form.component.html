@@ -16,7 +16,7 @@
             This field is requied!
           </div>
           <div *ngIf="f.email.touched && f.email.errors?.pattern" class="alert alert-danger">
-            Password shoud be of type: example@example.com
+            Email shoud be of type: example@example.com
           </div>
 
           <!-- Password input -->
@@ -34,7 +34,7 @@
             style="color: #393f81;">Register here</a></p>
           
           <!-- Submit button -->
-          <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button> 
+          <button type="submit" disabled="f.invalid" class="btn btn-primary btn-lg btn-block">Sign in</button> 
         </form>
       </div>
     </div>

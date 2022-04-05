@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { AuthServiceService } from 'src/app/core/auth-service/auth-service.service';
 
 @Component({
@@ -7,13 +8,22 @@ import { AuthServiceService } from 'src/app/core/auth-service/auth-service.servi
   styleUrls: ['./register-form.component.css']
 })
 export class RegisterFormComponent implements OnInit {
-
-  constructor(private service: AuthServiceService) { }
+  form: any;
+  constructor(private service: AuthServiceService, private fb: FormBuilder) { }
 
   ngOnInit(): void {
+    this.form = this.fb.group({
+      email: ['', [Validators.pattern(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)]],
+      password: ['', [Validators.pattern(/^.{6,}$/)]],
+      repeatPass: ['']
+    })
   }
   
-  register(data: any){
-    this.service.register(data['email'], data['password']);
+  register(){
+    this.service.register(this.form.controls.email.value, this.form.controls.password.value);
+  }
+
+  get f(){
+    return this.form.controls;
   }
 }
