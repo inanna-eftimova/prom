@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { 
   getAuth, 
   createUserWithEmailAndPassword, 
@@ -6,6 +7,7 @@ import {
   signOut,
   onAuthStateChanged  
 } from "firebase/auth";
+import { ToastrService } from 'ngx-toastr';
 
 let uid: any = null;
 
@@ -14,13 +16,21 @@ let uid: any = null;
 })
 
 export class AuthServiceService {
-  constructor() { }
+  constructor(private toastr: ToastrService, private router: Router) { }
 
   register(email: string, password: string){
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, email, password)
-    .then(data => console.log(data))
-    .catch(err => console.log(err));
+    .then(data =>{
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+           uid = user.uid;
+           this.router.navigate(['/profile']);
+           this.toastr.success('Singed Up', 'Success');
+        }
+      })
+    })
+    .catch(err => this.toastr.error(err.message, "Warning"))
   }
 
   login(email: string, password: string){
@@ -30,20 +40,23 @@ export class AuthServiceService {
       onAuthStateChanged(auth, (user) => {
         if (user) {
            uid = user.uid;
+           this.router.navigate(['/profile']);
+           this.toastr.success('Logged In', 'Success');
         }
       })
     })
-    .catch(err => console.log(err));
+    .catch(err => this.toastr.error(err.message, "Warning"));
   }
 
   logout(){
-    // const auth = getAuth();
-    // signOut(auth)
-    // .then((data) => {
-    //   uid = null;
-    // })
-    // .catch(err => console.log(err));
-    uid = null;
+    const auth = getAuth();
+    signOut(auth)
+    .then((data) => {
+      uid = null;
+      this.router.navigate(['']);
+      this.toastr.success('Logged Out', 'Success');
+    })
+    .catch(err => this.toastr.error(err.message, "Warning"));
   }
 
   getUId(){
