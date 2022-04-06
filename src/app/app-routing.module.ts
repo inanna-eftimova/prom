@@ -16,6 +16,7 @@ const routes: Routes = [
   {path: '', component: HomePageComponent},
   {path: 'login', component: LoginFormComponent},
   {path: 'register', component: RegisterFormComponent},
+  {path: 'search', component: LoginMessagePageComponent},
   {path: 'auth', children: [
      {path: 'create', component: CreateFormComponent},
      {path: 'search', component: SearchPageComponent},
