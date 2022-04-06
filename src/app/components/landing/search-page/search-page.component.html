@@ -1,11 +1,16 @@
 <div>
   <h1>What are you looking for ?</h1>
 <div class="input-group">
-  <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-  <button type="button" class="btn btn-outline-primary">search</button>
+  <input type="search" name="search" [(ngModel)]="dataInput" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+  <button type="button" (click)="searcher()" class="btn btn-outline-primary">search</button>
 </div>
 <h2>Results :</h2>
 <div class="results">
+  <div *ngFor="let offer of offers">
+      <div *ngIf="offer['title'].includes(dataInput)">
+        <app-offer [parentData]="offer"></app-offer>
+      </div>
+  </div>
   <!-- <app-offer></app-offer>
   <app-offer></app-offer>
   <app-offer></app-offer>

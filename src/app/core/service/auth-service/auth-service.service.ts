@@ -74,6 +74,19 @@ export class AuthServiceService {
     return token;
   }
 
+  getUId(): any{
+    let myUserid: any;
+    const auth = getAuth();
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        userdata = user;
+        myUserid = userdata.uid;
+        console.log(myUserid)
+         return myUserid;
+      }
+    })
+  }
+
   isAuthenticated(): boolean{
     return token != null;
   }

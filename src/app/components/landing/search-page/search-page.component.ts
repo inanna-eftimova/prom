@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OffersService } from 'src/app/core/service/offers-service/offers.service';
 
 @Component({
   selector: 'app-search-page',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-page.component.css']
 })
 export class SearchPageComponent implements OnInit {
-
-  constructor() { }
-
+  constructor(private offersServise: OffersService) { }
+  dataInput: string = '';
+  offers: any;
   ngOnInit(): void {
   }
-
+  searcher(){
+    this.offersServise.getAllOffers().subscribe(data => {
+        this.offers = data;
+    })
+  }
 }

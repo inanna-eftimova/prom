@@ -8,6 +8,7 @@ import { OffersModule } from '../offers/offers.module';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { LoginMessagePageComponent } from './login-message-page/login-message-page.component';
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -23,7 +24,8 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
   imports: [
     CommonModule,
     OffersModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   exports: [
     HomePageComponent,
