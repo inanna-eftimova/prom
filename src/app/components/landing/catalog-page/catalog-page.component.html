@@ -1,10 +1,6 @@
 <div>
   <h1>Our Offers</h1>
   <div class="catalog_grid">
-    <app-offer></app-offer>
-    <app-offer></app-offer>
-    <app-offer></app-offer>
-    <app-offer></app-offer>
-    <app-offer></app-offer>
+    <app-offer *ngFor="let offer of offers" [parentData]="offer"></app-offer>
   </div>
 </div>

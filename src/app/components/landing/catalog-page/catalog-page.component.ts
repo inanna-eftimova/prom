@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OffersService } from 'src/app/core/service/offers-service/offers.service';
 
 @Component({
   selector: 'app-catalog-page',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./catalog-page.component.css']
 })
 export class CatalogPageComponent implements OnInit {
-
-  constructor() { }
+  offers: any;
+  constructor(private offersService: OffersService) { }
 
   ngOnInit(): void {
+    this.offersService.getAllOffers().subscribe(data => {
+      this.offers = data;
+    })
   }
 
 }

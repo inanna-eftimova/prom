@@ -1,4 +1,4 @@
-export interface Offer{
+export default interface Offer{
    description: string,
    img: string,
    objectId: string,
