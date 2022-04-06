@@ -1,0 +1,19 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { AuthServiceService } from '../auth-service/auth-service.service';
+
+const BASE_URL = 'https://dream-prom-db-default-rtdb.firebaseio.com/results/.json?auth=';
+
+
+@Injectable({
+  providedIn: 'root'
+})
+export class OffersService {
+
+  constructor(private http: HttpClient, private authService: AuthServiceService) { }
+
+  getAllOffers(){
+    const token = this.authService.getToken()
+    return this.http.get(BASE_URL + token);
+  }
+}

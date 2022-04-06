@@ -62,7 +62,7 @@ export class AuthServiceService {
     .catch(err => this.toastr.error(err.message, "Warning"));
   }
 
-  getUId(){
+  getToken(){
     const auth = getAuth();
     onAuthStateChanged(auth, (user) => {
       if (user) {
