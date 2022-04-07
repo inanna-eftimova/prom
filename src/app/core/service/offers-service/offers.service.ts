@@ -18,6 +18,6 @@ export class OffersService {
   }
   getCurrentOfferd(id: any){
     const token = localStorage.getItem('token');
-    return this.http.get(BASE_URL + "/results/" + "${id}" + END_POINT + token);
+    return this.http.get(BASE_URL + "/results/" + id + END_POINT + token);
   }
 }

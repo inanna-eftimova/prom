@@ -13,10 +13,9 @@ export class DetailsPageComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.route.snapshot.params['id'];
-    console.log(id)
-    // this.offersService.getCurrentOfferd(id).subscribe(data => {
-    //   console.log(data);
-    // })
+    this.offersService.getCurrentOfferd(id).subscribe(data => {
+      console.log(data);
+    })
   }
 
 }
