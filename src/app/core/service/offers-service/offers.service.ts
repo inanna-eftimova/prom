@@ -13,7 +13,7 @@ export class OffersService {
   constructor(private http: HttpClient, private authService: AuthServiceService) { }
 
   getAllOffers(){
-    const token = this.authService.getToken()
+    const token = localStorage.getItem('token');
     return this.http.get(BASE_URL + "/results" + END_POINT + token);
   }
 }

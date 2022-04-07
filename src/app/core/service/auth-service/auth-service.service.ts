@@ -18,7 +18,7 @@ let token: any = null;
 
 export class AuthServiceService {
   constructor(private toastr: ToastrService, private router: Router) { }
-
+  public uid: any;
   register(email: string, password: string){
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, email, password)
@@ -27,6 +27,9 @@ export class AuthServiceService {
         if (user) {
           userdata = user;
            token = userdata.accessToken;
+           localStorage.setItem('token', token);
+           this.uid = userdata.uid;
+           localStorage.setItem('email', userdata.email)
            this.router.navigate(['/auth/profile']);
            this.toastr.success('Singed Up', 'Success');
         }
@@ -43,6 +46,9 @@ export class AuthServiceService {
         if (user) {
            userdata = user;
            token = userdata.accessToken;
+           localStorage.setItem('token', token);
+           this.uid = userdata.uid;
+           localStorage.setItem('email', userdata.email)
            this.router.navigate(['/auth/profile']);
            this.toastr.success('Logged In', 'Success');
         }
@@ -58,36 +64,30 @@ export class AuthServiceService {
       token = null;
       this.router.navigate(['']);
       this.toastr.success('Logged Out', 'Success');
+      localStorage.removeItem('token');
+      localStorage.removeItem('email');
     })
     .catch(err => this.toastr.error(err.message, "Warning"));
   }
 
-  getToken(){
-    const auth = getAuth();
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        userdata = user;
-        token = userdata.accessToken;
-      }
-    })
+  // getToken(){
+  //   const auth = getAuth();
+  //   onAuthStateChanged(auth, (user) => {
+  //     if (user) {
+  //       userdata = user;
+  //       token = userdata.accessToken;
+  //     }
+  //   })
 
-    return token;
-  }
+  //   return token;
+  // }
+
 
   getUId(): any{
-    let myUserid: any;
-    const auth = getAuth();
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        userdata = user;
-        myUserid = userdata.uid;
-        console.log(myUserid)
-         return myUserid;
-      }
-    })
+    return this.uid;
   }
 
   isAuthenticated(): boolean{
-    return token != null;
+    return localStorage.getItem('token')!=undefined;
   }
 }

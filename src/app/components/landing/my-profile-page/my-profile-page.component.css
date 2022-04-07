@@ -15,3 +15,7 @@ h1{
 .offers_title{
   font-size: 36px;
 }
+.card-text{
+  color: red;
+  text-align: center;
+}

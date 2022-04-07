@@ -16,4 +16,8 @@ export class OfferComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  details(){
+    console.log('inana');
+  }
+
 }

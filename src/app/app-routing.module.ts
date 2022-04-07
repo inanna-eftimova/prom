@@ -16,12 +16,13 @@ const routes: Routes = [
   {path: '', component: HomePageComponent},
   {path: 'login', component: LoginFormComponent},
   {path: 'register', component: RegisterFormComponent},
-  {path: 'search', component: LoginMessagePageComponent},
+  {path: 'catalog', component: LoginMessagePageComponent},
   {path: 'auth', children: [
      {path: 'create', component: CreateFormComponent},
      {path: 'search', component: SearchPageComponent},
      {path: 'profile', component: MyProfilePageComponent},
      {path: 'catalog', component: CatalogPageComponent},
+     {path: '**', component: MyProfilePageComponent},
   ], canActivate: [AuthGuard]},
   {path: 'shoudLogin', component: LoginMessagePageComponent},
   {path: '**', component: NotFoundPageComponent}

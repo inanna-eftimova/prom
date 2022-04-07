@@ -7,9 +7,10 @@ import { OffersService } from 'src/app/core/service/offers-service/offers.servic
   templateUrl: './my-profile-page.component.html',
   styleUrls: ['./my-profile-page.component.css']
 })
-export class MyProfilePageComponent implements OnInit {
+export class MyProfilePageComponent implements OnInit{
   offers: any;
   uid: any;
+  email: any;
   constructor(private offersService: OffersService, 
     private authService: AuthServiceService) { }
 
@@ -17,9 +18,8 @@ export class MyProfilePageComponent implements OnInit {
     this.offersService.getAllOffers().subscribe(data => {
        this.offers = data;
        this.uid = this.authService.getUId();
-       console.log(this.authService.getUId())
+       this.email = localStorage.getItem('email');
     })
-
   }
 
 }
