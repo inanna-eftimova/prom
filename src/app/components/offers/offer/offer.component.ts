@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-offer',
@@ -12,14 +11,9 @@ export class OfferComponent implements OnInit {
 
   @Input('parentData') data: any;
 
-  constructor(private route: ActivatedRoute){}
+  constructor(){}
 
   ngOnInit(): void {
-  }
-
-  details(){
-    const id = this.route.snapshot.params['id'];
-    console.log(id)
   }
 
 }

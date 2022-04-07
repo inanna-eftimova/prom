@@ -16,7 +16,7 @@ export class MyProfilePageComponent implements OnInit{
 
   ngOnInit(): void {
     this.offersService.getAllOffers().subscribe(data => {
-       this.offers = data;
+       this.offers = Object.values(data);
        this.uid = this.authService.getUId();
        this.email = localStorage.getItem('email');
     })
