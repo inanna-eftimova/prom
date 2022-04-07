@@ -22,6 +22,7 @@ const routes: Routes = [
      {path: 'search', component: SearchPageComponent},
      {path: 'profile', component: MyProfilePageComponent},
      {path: 'catalog', component: CatalogPageComponent},
+     {path: 'details/:id', component: SearchPageComponent},
      {path: '**', component: MyProfilePageComponent},
   ], canActivate: [AuthGuard]},
   {path: 'shoudLogin', component: LoginMessagePageComponent},
