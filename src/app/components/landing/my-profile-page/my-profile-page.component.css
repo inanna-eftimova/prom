@@ -19,3 +19,8 @@ h1{
   color: red;
   text-align: center;
 }
+.alert.alert-info{
+  width: 600px;
+  text-align: center;
+  margin: 50px auto;
+}
