@@ -19,7 +19,7 @@
             <p name="description">{{data?.description}}</p>
           </div>
           <div *ngIf="uid == dataUid" class="buttons">
-            <button type="button" class="btn btn-outline-primary">Edit</button>
+            <button routerLink="/auth/details/{{dataId}}/edit" type="button" class="btn btn-outline-primary">Edit</button>
             <button type="button" class="btn btn-outline-danger">Delete</button>
           </div>
       </div>

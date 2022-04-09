@@ -11,6 +11,7 @@ export class DetailsPageComponent implements OnInit {
   data: any;
   public uid = localStorage.getItem('uid');
   dataUid: any;
+  dataId: any;
   constructor(private route: ActivatedRoute, private offersService: OffersService) { }
 
   ngOnInit(): void {
@@ -18,7 +19,7 @@ export class DetailsPageComponent implements OnInit {
     this.offersService.getCurrentOfferd(id).subscribe(data => {
       this.data = data;
      this.dataUid = this.data.userId;
-      console.log(this.data);
+     this.dataId = this.data.id;
     })
   }
 

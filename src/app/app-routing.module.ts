@@ -12,6 +12,7 @@ import { NotFoundPageComponent } from './components/landing/not-found-page/not-f
 import { SearchPageComponent } from './components/landing/search-page/search-page.component';
 import { CreateFormComponent } from './components/offers/create-form/create-form.component';
 import { AuthGuard } from './components/shared/guards/auth.guard';
+import { EditFormComponent } from './components/offers/edit-form/edit-form.component';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent},
@@ -24,6 +25,7 @@ const routes: Routes = [
      {path: 'profile', component: MyProfilePageComponent},
      {path: 'catalog', component: CatalogPageComponent},
      {path: 'details/:id', component: DetailsPageComponent},
+     {path: 'details/:id/edit', component: EditFormComponent},
      {path: '**', component: MyProfilePageComponent},
   ], canActivate: [AuthGuard]},
   {path: 'shoudLogin', component: LoginMessagePageComponent},
