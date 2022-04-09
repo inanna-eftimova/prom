@@ -1,5 +1,28 @@
-<div class="container">
-  <section class="container-content">
-    
-  </section>
-</div>
+<section class="vh-100">
+  <div class="container py-5 h-100">
+    <div class="row d-flex align-items-center justify-content-center h-100">
+      <div class="col-md-8 col-lg-7 col-xl-6">
+        <img src="{{data?.img}}" class="img-fluid" alt="Phone image">
+      </div>
+      <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+          <div class="form-outline mb-4">
+            <h2 name="title">{{data?.title}}</h2>
+          </div>
+      
+          <div class="form-outline mb-4">
+            <h4 name="stars">{{data?.stars}}</h4>
+          </div>
+          <div class="form-outline mb-4">
+            <h5 name="price">{{data?.price}}</h5>
+          </div>
+          <div class="form-outline mb-4">
+            <p name="description">{{data?.description}}</p>
+          </div>
+          <div *ngIf="uid == dataUid" class="buttons">
+            <button type="button" class="btn btn-outline-primary">Edit</button>
+            <button type="button" class="btn btn-outline-danger">Delete</button>
+          </div>
+      </div>
+    </div>
+    </div>
+</section>

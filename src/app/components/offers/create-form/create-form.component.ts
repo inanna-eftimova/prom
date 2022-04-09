@@ -20,15 +20,14 @@ export class CreateFormComponent implements OnInit {
       stars: ['', Validators.required],
       img: ['', [Validators.required, Validators.pattern(/\.(jpe?g|png|gif|bmp)$/i)]],
       description: ['', Validators.required],
-      uid: [localStorage.getItem('uid')],
+      userId: [localStorage.getItem('uid')],
       name: []
     })
   }
 
   create(){
-
     this.offersSevice.createOffer(this.form.value).subscribe(data => {
-      console.log(data);
+      
     })
   }
 

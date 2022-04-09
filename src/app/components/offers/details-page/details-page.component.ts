@@ -8,13 +8,17 @@ import { OffersService } from 'src/app/core/service/offers-service/offers.servic
   styleUrls: ['./details-page.component.css']
 })
 export class DetailsPageComponent implements OnInit {
-
+  data: any;
+  public uid = localStorage.getItem('uid');
+  dataUid: any;
   constructor(private route: ActivatedRoute, private offersService: OffersService) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.params['id'];
     this.offersService.getCurrentOfferd(id).subscribe(data => {
-      console.log(data);
+      this.data = data;
+     this.dataUid = this.data.userId;
+      console.log(this.data);
     })
   }
 
