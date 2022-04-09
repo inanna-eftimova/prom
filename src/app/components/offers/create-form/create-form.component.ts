@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { OffersService } from 'src/app/core/service/offers-service/offers.service';
 
 
 @Component({
@@ -10,20 +11,25 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class CreateFormComponent implements OnInit {
   form: any;
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private offersSevice: OffersService) { }
 
   ngOnInit(): void {
     this.form = this.fb.group({
-      hotel: ['', Validators.required],
-      town: ['', Validators.required],
+      title: ['', Validators.required],
       price: ['', Validators.required],
+      stars: ['', Validators.required],
       img: ['', [Validators.required, Validators.pattern(/\.(jpe?g|png|gif|bmp)$/i)]],
-      description: ['', Validators.required]
+      description: ['', Validators.required],
+      uid: [localStorage.getItem('uid')],
+      name: []
     })
   }
 
   create(){
-    console.log(this.form);
+
+    this.offersSevice.createOffer(this.form.value).subscribe(data => {
+      console.log(data);
+    })
   }
 
 }

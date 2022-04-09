@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { AuthServiceService } from '../auth-service/auth-service.service';
 
 const BASE_URL = 'https://dream-prom-db-default-rtdb.firebaseio.com';
-const END_POINT = '/.json?auth=';
 
 @Injectable({
   providedIn: 'root'
@@ -14,10 +13,13 @@ export class OffersService {
 
   getAllOffers(){
     const token = localStorage.getItem('token');
-    return this.http.get(BASE_URL + "/results" + END_POINT + token);
+    return this.http.get(BASE_URL + "/results/.json");
   }
   getCurrentOfferd(id: any){
     const token = localStorage.getItem('token');
-    return this.http.get(BASE_URL + "/results/" + id + END_POINT + token);
+    return this.http.get(BASE_URL + "/results/" + id + '/.json');
+  }
+  createOffer(data: any){
+    return this.http.post(BASE_URL + "/results/.json", data);
   }
 }

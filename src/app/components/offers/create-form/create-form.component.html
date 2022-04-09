@@ -3,21 +3,21 @@
       <div class="container">
 
           <h1>Create Offerd</h1>
-          <label for="hotel">Hotel</label>
-          <input type="text" id="hotel" name="hotel" placeholder="Enter hotel title..." formControlName="hotel">
-          <div *ngIf="form.controls.hotel.touched && form.controls.hotel.errors?.required" class="alert alert-danger">
-            This input field is requied!
-          </div>
-
-          <label for="town">Town:</label>
-          <input type="text" id="town" name="town" placeholder="Enter town name..." formControlName="town">
-          <div *ngIf="form.controls.town.touched && form.controls.town.errors?.required" class="alert alert-danger">
+          <label for="title">Hotel</label>
+          <input type="text" id="title" name="title" placeholder="Enter hotel title..." formControlName="title">
+          <div *ngIf="form.controls.title.touched && form.controls.title.errors?.required" class="alert alert-danger">
             This input field is requied!
           </div>
 
           <label for="price">Price:</label>
           <input type="number" id="price"  name="price" min="1" placeholder="1$" formControlName="price">
           <div *ngIf="form.controls.price.touched && form.controls.price.errors?.required" class="alert alert-danger">
+            This input field is requied!
+          </div>
+
+          <label for="stars">Stars:</label>
+          <input type="text" id="stars"  name="stars" min="1" placeholder="**" formControlName="stars">
+          <div *ngIf="form.controls.stars.touched && form.controls.stars.errors?.required" class="alert alert-danger">
             This input field is requied!
           </div>
 
