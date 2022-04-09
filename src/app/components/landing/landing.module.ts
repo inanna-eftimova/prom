@@ -9,6 +9,7 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
 import { LoginMessagePageComponent } from './login-message-page/login-message-page.component';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { AlertPageComponent } from './alert-page/alert-page.component';
 
 
 
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     SearchPageComponent,
     MyProfilePageComponent,
     NotFoundPageComponent,
-    LoginMessagePageComponent
+    LoginMessagePageComponent,
+    AlertPageComponent
   ],
   imports: [
     CommonModule,

@@ -22,4 +22,10 @@ export class OffersService {
   createOffer(data: any){
     return this.http.post(BASE_URL + "/results/.json", data);
   }
+  deleteOffer(id: any){
+     return this.http.delete(BASE_URL + "/results/" + id + '/.json');
+  }
+  updateOffer(data: any, id: any){
+    return this.http.patch(BASE_URL + "/results/" + id + '/.json', data);
+  }
 }

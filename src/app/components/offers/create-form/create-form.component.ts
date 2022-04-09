@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { OffersService } from 'src/app/core/service/offers-service/offers.service';
 
 
@@ -11,7 +13,10 @@ import { OffersService } from 'src/app/core/service/offers-service/offers.servic
 export class CreateFormComponent implements OnInit {
   form: any;
 
-  constructor(private fb: FormBuilder, private offersSevice: OffersService) { }
+  constructor(private fb: FormBuilder, 
+    private offersSevice: OffersService,
+    private router: Router,
+    private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.form = this.fb.group({
@@ -20,14 +25,14 @@ export class CreateFormComponent implements OnInit {
       stars: ['', Validators.required],
       img: ['', [Validators.required, Validators.pattern(/\.(jpe?g|png|gif|bmp)$/i)]],
       description: ['', Validators.required],
-      userId: [localStorage.getItem('uid')],
-      name: []
+      userId: [localStorage.getItem('uid')]
     })
   }
 
   create(){
     this.offersSevice.createOffer(this.form.value).subscribe(data => {
-      
+      this.toastr.success('Added offer!', 'Success');
+      this.router.navigate(['/auth/catalog']);
     })
   }
 

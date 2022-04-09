@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { OffersService } from 'src/app/core/service/offers-service/offers.service';
 
 @Component({
@@ -12,14 +13,23 @@ export class DetailsPageComponent implements OnInit {
   public uid = localStorage.getItem('uid');
   dataUid: any;
   dataId: any;
-  constructor(private route: ActivatedRoute, private offersService: OffersService) { }
+  constructor(private route: ActivatedRoute,
+     private offersService: OffersService,
+      private router: Router,
+      private toastr: ToastrService) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.params['id'];
     this.offersService.getCurrentOfferd(id).subscribe(data => {
       this.data = data;
      this.dataUid = this.data.userId;
-     this.dataId = this.data.id;
+     this.dataId = id;
+    })
+  }
+  delete(){
+    this.offersService.deleteOffer(this.dataId).subscribe(data => {
+      this.toastr.success('Delete offer!', 'Success');
+      this.router.navigate(['/auth/catalog']);
     })
   }
 

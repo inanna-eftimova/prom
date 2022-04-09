@@ -20,7 +20,7 @@
           </div>
           <div *ngIf="uid == dataUid" class="buttons">
             <button routerLink="/auth/details/{{dataId}}/edit" type="button" class="btn btn-outline-primary">Edit</button>
-            <button type="button" class="btn btn-outline-danger">Delete</button>
+            <button (click)="delete()"  type="button" class="btn btn-outline-danger">Delete</button>
           </div>
       </div>
     </div>
