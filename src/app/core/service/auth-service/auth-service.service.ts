@@ -18,7 +18,6 @@ let token: any = null;
 
 export class AuthServiceService {
   constructor(private toastr: ToastrService, private router: Router) { }
-  public uid: any;
   register(email: string, password: string){
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, email, password)
@@ -28,8 +27,8 @@ export class AuthServiceService {
           userdata = user;
            token = userdata.accessToken;
            localStorage.setItem('token', token);
-           this.uid = userdata.uid;
            localStorage.setItem('email', userdata.email)
+           localStorage.setItem('uid', userdata.uid)
            this.router.navigate(['/auth/profile']);
            this.toastr.success('Singed Up', 'Success');
         }
@@ -47,8 +46,8 @@ export class AuthServiceService {
            userdata = user;
            token = userdata.accessToken;
            localStorage.setItem('token', token);
-           this.uid = userdata.uid;
            localStorage.setItem('email', userdata.email)
+           localStorage.setItem('uid', userdata.uid)
            this.router.navigate(['/auth/profile']);
            this.toastr.success('Logged In', 'Success');
         }
@@ -66,6 +65,7 @@ export class AuthServiceService {
       this.toastr.success('Logged Out', 'Success');
       localStorage.removeItem('token');
       localStorage.removeItem('email');
+      localStorage.removeItem('uid');
     })
     .catch(err => this.toastr.error(err.message, "Warning"));
   }
@@ -82,10 +82,6 @@ export class AuthServiceService {
   //   return token;
   // }
 
-
-  getUId(): any{
-    return this.uid;
-  }
 
   isAuthenticated(): boolean{
     return localStorage.getItem('token')!=undefined;

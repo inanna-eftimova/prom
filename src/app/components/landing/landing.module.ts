@@ -9,7 +9,6 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
 import { LoginMessagePageComponent } from './login-message-page/login-message-page.component';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { FormsModule } from '@angular/forms';
-import { DetailsPageComponent } from './details-page/details-page.component';
 
 
 
@@ -20,8 +19,7 @@ import { DetailsPageComponent } from './details-page/details-page.component';
     SearchPageComponent,
     MyProfilePageComponent,
     NotFoundPageComponent,
-    LoginMessagePageComponent,
-    DetailsPageComponent
+    LoginMessagePageComponent
   ],
   imports: [
     CommonModule,
@@ -35,8 +33,7 @@ import { DetailsPageComponent } from './details-page/details-page.component';
     SearchPageComponent,
     MyProfilePageComponent,
     NotFoundPageComponent,
-    LoginMessagePageComponent,
-    DetailsPageComponent
+    LoginMessagePageComponent
   ]
 })
 export class LandingModule { }

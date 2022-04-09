@@ -5,11 +5,16 @@
   <button type="button" (click)="searcher()" class="btn btn-outline-primary">search</button>
 </div>
 <h2>Results :</h2>
-<div class="results">
+<div *ngIf="offers" class="results">
   <div *ngFor="let offer of offers">
-      <div *ngIf="offer['title'].includes(dataInput)">
+      <div *ngIf="offer['title'].includes(dataInput) && dataInput!=''">
         <app-offer [parentData]="offer"></app-offer>
       </div>
+  </div>
+</div>
+<div *ngIf="offers && dataInput!=''">
+  <div class="alert alert-info" role="alert">
+    No have data in db!
   </div>
 </div>
 </div>

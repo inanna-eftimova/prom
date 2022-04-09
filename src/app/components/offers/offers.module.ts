@@ -4,6 +4,8 @@ import { EditFormComponent } from './edit-form/edit-form.component';
 import { CreateFormComponent } from './create-form/create-form.component';
 import { OfferComponent } from './offer/offer.component';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+import { DetailsPageComponent } from './details-page/details-page.component';
 
 
 
@@ -11,16 +13,19 @@ import { RouterModule } from '@angular/router';
   declarations: [
     EditFormComponent,
     CreateFormComponent,
-    OfferComponent
+    OfferComponent,
+    DetailsPageComponent
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule
   ],
   exports: [
     CreateFormComponent,
     EditFormComponent,
-    OfferComponent
+    OfferComponent,
+    DetailsPageComponent
   ]
 })
 export class OffersModule { }

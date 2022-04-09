@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginFormComponent } from './components/authentication/login-form/login-form.component';
 import { RegisterFormComponent } from './components/authentication/register-form/register-form.component';
 import { CatalogPageComponent } from './components/landing/catalog-page/catalog-page.component';
-import { DetailsPageComponent } from './components/landing/details-page/details-page.component';
+import { DetailsPageComponent } from './components/offers/details-page/details-page.component';
 import { HomePageComponent } from './components/landing/home-page/home-page.component';
 import { LoginMessagePageComponent } from './components/landing/login-message-page/login-message-page.component';
 import { MyProfilePageComponent } from './components/landing/my-profile-page/my-profile-page.component';

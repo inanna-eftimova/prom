@@ -11,7 +11,7 @@
       Hello, {{email}}!
     </div>
   <h1 class="offers_title">My Offers</h1>
-  <div class="catalog_grid">
+  <div *ngIf="offers" class="catalog_grid">
     <div *ngFor="let offer of offers">
       <div *ngIf="offer.userId == uid">
         <app-offer [parentData]="offer"></app-offer>

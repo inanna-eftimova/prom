@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { AuthServiceService } from 'src/app/core/service/auth-service/auth-service.service';
+import { Component, OnInit} from '@angular/core';
 import { OffersService } from 'src/app/core/service/offers-service/offers.service';
 
 @Component({
@@ -11,13 +10,12 @@ export class MyProfilePageComponent implements OnInit{
   offers: any;
   uid: any;
   email: any;
-  constructor(private offersService: OffersService, 
-    private authService: AuthServiceService) { }
+  constructor(private offersService: OffersService) { }
 
   ngOnInit(): void {
     this.offersService.getAllOffers().subscribe(data => {
        this.offers = Object.values(data);
-       this.uid = this.authService.getUId();
+       this.uid = localStorage.getItem('uid');
        this.email = localStorage.getItem('email');
     })
   }
