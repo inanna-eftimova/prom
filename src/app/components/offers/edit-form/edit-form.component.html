@@ -10,9 +10,12 @@
         </div>
 
         <label for="price">Price:</label>
-        <input type="number" id="price"  name="price" min="1" placeholder="1$" formControlName="price">
+        <input type="text" id="price"  name="price" min="1" placeholder="$1" formControlName="price">
         <div *ngIf="form.controls.price.touched && form.controls.price.errors?.required" class="alert alert-danger">
           This input field is requied!
+        </div>
+        <div *ngIf="form.controls.price.touched && form.controls.price.errors?.pattern" class="alert alert-danger">
+          This price field should be positive number;
         </div>
 
         <label for="stars">Stars:</label>

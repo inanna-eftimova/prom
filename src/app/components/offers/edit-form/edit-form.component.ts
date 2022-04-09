@@ -26,7 +26,7 @@ export class EditFormComponent implements OnInit {
       this.serverData = data;
       this.form = this.fb.group({
         title: [this.serverData['title'], Validators.required],
-        price: [this.serverData['price'], Validators.required],
+        price: [this.serverData['price'], [Validators.required, Validators.pattern( /^\$?[0-9]+(\.[0-9][0-9])?$/)]],
         stars: [this.serverData['stars'], Validators.required],
         img: [this.serverData['img'], [Validators.required, Validators.pattern(/\.(jpe?g|png|gif|bmp)$/i)]],
         description: [this.serverData['description'], Validators.required],
