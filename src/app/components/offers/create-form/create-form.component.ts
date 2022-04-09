@@ -17,7 +17,7 @@ export class CreateFormComponent implements OnInit {
       hotel: ['', Validators.required],
       town: ['', Validators.required],
       price: ['', Validators.required],
-      img: [''],
+      img: ['', [Validators.required, Validators.pattern(/\.(jpe?g|png|gif|bmp)$/i)]],
       description: ['', Validators.required]
     })
   }

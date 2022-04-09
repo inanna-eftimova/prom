@@ -15,15 +15,21 @@
             This input field is requied!
           </div>
 
-          <label for="levels">Price:</label>
+          <label for="price">Price:</label>
           <input type="number" id="price"  name="price" min="1" placeholder="1$" formControlName="price">
           <div *ngIf="form.controls.price.touched && form.controls.price.errors?.required" class="alert alert-danger">
             This input field is requied!
           </div>
 
-          <label for="game-img">Image:</label>
-          <input type="text" id="imageUrl" name="imageUrl" placeholder="Upload a photo..." formControlName="img">
-           
+          <label for="img">Image:</label>
+          <input appImgValidation type="text" id="imageUrl" name="imageUrl" placeholder="Upload a photo..." formControlName="img">
+          <div *ngIf="form.controls.img.touched && form.controls.img.errors?.required" class="alert alert-danger">
+            This input field is requied!
+          </div> 
+          <div *ngIf="form.controls.img?.touched && form.controls.img.errors?.pattern" class="alert alert-danger">
+            Invalid url!
+          </div> 
+
           <label for="description">Description:</label>
           <textarea name="description" id="description" formControlName="description"></textarea>
           <div *ngIf="form.controls.description.touched && form.controls.description.errors?.required" class="alert alert-danger">
