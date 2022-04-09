@@ -4,8 +4,8 @@ import { EditFormComponent } from './edit-form/edit-form.component';
 import { CreateFormComponent } from './create-form/create-form.component';
 import { OfferComponent } from './offer/offer.component';
 import { RouterModule } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
 import { DetailsPageComponent } from './details-page/details-page.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -19,6 +19,7 @@ import { DetailsPageComponent } from './details-page/details-page.component';
   imports: [
     CommonModule,
     RouterModule,
+    FormsModule,
     ReactiveFormsModule
   ],
   exports: [

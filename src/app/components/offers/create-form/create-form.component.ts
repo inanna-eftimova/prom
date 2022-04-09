@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-create-form',
@@ -8,12 +9,21 @@ import { FormBuilder } from '@angular/forms';
 })
 export class CreateFormComponent implements OnInit {
   form: any;
+
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
-    // this.form = this.fb.group({
+    this.form = this.fb.group({
+      hotel: ['', Validators.required],
+      town: ['', Validators.required],
+      price: ['', Validators.required],
+      img: [''],
+      description: ['', Validators.required]
+    })
+  }
 
-    // })
+  create(){
+    console.log(this.form);
   }
 
 }

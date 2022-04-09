@@ -1,23 +1,35 @@
 <section id="create-page" class="auth">
-  <form [formGroup]="form" id="create">
+  <form [formGroup]="form" id="create" (ngSubmit)="create()">
       <div class="container">
 
           <h1>Create Offerd</h1>
           <label for="hotel">Hotel</label>
-          <input type="text" formControlName="hotel" id="hotel" name="hotel" placeholder="Enter hotel title...">
+          <input type="text" id="hotel" name="hotel" placeholder="Enter hotel title..." formControlName="hotel">
+          <div *ngIf="form.controls.hotel.touched && form.controls.hotel.errors?.required" class="alert alert-danger">
+            This input field is requied!
+          </div>
 
           <label for="town">Town:</label>
-          <input type="text" id="town" formControlName="town" name="town" placeholder="Enter town name...">
+          <input type="text" id="town" name="town" placeholder="Enter town name..." formControlName="town">
+          <div *ngIf="form.controls.town.touched && form.controls.town.errors?.required" class="alert alert-danger">
+            This input field is requied!
+          </div>
 
           <label for="levels">Price:</label>
-          <input type="number" id="price" formControlName="price" name="price" min="1" placeholder="1$">
+          <input type="number" id="price"  name="price" min="1" placeholder="1$" formControlName="price">
+          <div *ngIf="form.controls.price.touched && form.controls.price.errors?.required" class="alert alert-danger">
+            This input field is requied!
+          </div>
 
           <label for="game-img">Image:</label>
-          <input type="text" id="imageUrl" formControlName="image" name="imageUrl" placeholder="Upload a photo...">
-
+          <input type="text" id="imageUrl" name="imageUrl" placeholder="Upload a photo..." formControlName="img">
+           
           <label for="description">Description:</label>
-          <textarea name="description" id="description"></textarea>
-          <input class="btn btn-primary" type="submit" value="Add Offerd">
+          <textarea name="description" id="description" formControlName="description"></textarea>
+          <div *ngIf="form.controls.description.touched && form.controls.description.errors?.required" class="alert alert-danger">
+            This input field is requied!
+          </div>
+          <button [disabled]="form.invalid" class="btn btn-primary" type="submit">Add Offerd</button>
       </div>
   </form>
 </section>
