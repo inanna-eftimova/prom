@@ -10,10 +10,15 @@ export class SearchPageComponent implements OnInit {
   constructor(private offersServise: OffersService) { }
   dataInput: string = '';
   offers: any;
+  dataFromServer: any;
   ngOnInit(): void {
   }
   searcher(){
     this.offersServise.getAllOffers().subscribe(data => {
+      this.dataFromServer = data;
+      for (const el in this.dataFromServer) {
+        this.dataFromServer[el]['id'] = el;
+      }
       this.offers = Object.values(data);
     })
   }
