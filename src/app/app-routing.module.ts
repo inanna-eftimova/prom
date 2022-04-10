@@ -13,12 +13,14 @@ import { SearchPageComponent } from './components/landing/search-page/search-pag
 import { CreateFormComponent } from './components/offers/create-form/create-form.component';
 import { AuthGuard } from './components/shared/guards/auth.guard';
 import { EditFormComponent } from './components/offers/edit-form/edit-form.component';
+import { AboutUsComponent } from './components/landing/about-us/about-us.component';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent},
   {path: 'login', component: LoginFormComponent},
   {path: 'register', component: RegisterFormComponent},
   {path: 'catalog', component: LoginMessagePageComponent},
+  {path: 'about', component: AboutUsComponent},
   {path: 'auth', children: [
      {path: 'create', component: CreateFormComponent},
      {path: 'search', component: SearchPageComponent},

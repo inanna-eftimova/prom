@@ -10,6 +10,7 @@ import { LoginMessagePageComponent } from './login-message-page/login-message-pa
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { AlertPageComponent } from './alert-page/alert-page.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 
@@ -21,7 +22,8 @@ import { AlertPageComponent } from './alert-page/alert-page.component';
     MyProfilePageComponent,
     NotFoundPageComponent,
     LoginMessagePageComponent,
-    AlertPageComponent
+    AlertPageComponent,
+    AboutUsComponent
   ],
   imports: [
     CommonModule,
@@ -35,7 +37,8 @@ import { AlertPageComponent } from './alert-page/alert-page.component';
     SearchPageComponent,
     MyProfilePageComponent,
     NotFoundPageComponent,
-    LoginMessagePageComponent
+    LoginMessagePageComponent,
+    AboutUsComponent
   ]
 })
 export class LandingModule { }

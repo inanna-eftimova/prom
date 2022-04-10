@@ -1,3 +1,8 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Hurricane&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
 body{
   position: relative;
   min-height: 100vh;
@@ -5,5 +10,4 @@ body{
   background: radial-gradient(circle, rgba(255,199,244,1) 47%, rgba(247,108,255,1) 100%); */
   background-color: #8EC5FC;
   background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
-
 }

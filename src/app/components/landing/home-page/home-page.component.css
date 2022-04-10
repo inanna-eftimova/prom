@@ -1,9 +1,7 @@
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css');
-@import url('https://fonts.googleapis.com/css2?family=Hurricane&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inspiration&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
-/* font-family: 'Hurricane', cursive; */
 
+.container{
+  padding-bottom: 50px;
+}
 .home-title{
   text-align: center;
   font-family: 'Hurricane', cursive;
@@ -31,15 +29,4 @@
   margin: 0 auto;
   text-align: center;
   display: flex;
-}
-.about{
-  padding-top: 40px;
-  text-align: center;
-  width: 70vw;
-  margin: 0 auto;
-  padding-bottom: 60px;
-}
-.about h3{
-  font-family: 'Hurricane', cursive;
-  font-size: 40px;
 }
