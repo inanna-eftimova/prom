@@ -86,4 +86,7 @@ export class AuthServiceService {
   isAuthenticated(): boolean{
     return localStorage.getItem('token')!=undefined;
   }
+  isUserId(): boolean{
+    return localStorage.getItem('uid')!=undefined;
+  }
 }

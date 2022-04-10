@@ -13,6 +13,8 @@ export class EditFormComponent implements OnInit {
   form: any;
   serverData: any;
   id = this.route.snapshot.params['id'];
+  uid: any;
+  public localUid = localStorage.getItem('uid');
   constructor(
     private route: ActivatedRoute, 
     private fb: FormBuilder,
@@ -24,6 +26,7 @@ export class EditFormComponent implements OnInit {
   ngOnInit(): void {
     this.offersService.getCurrentOfferd(this.id).subscribe(data => {
       this.serverData = data;
+      this.uid = this.serverData['userId'];
       this.form = this.fb.group({
         title: [this.serverData['title'], Validators.required],
         price: [this.serverData['price'], [Validators.required, Validators.pattern( /^\$?[0-9]+(\.[0-9][0-9])?$/)]],

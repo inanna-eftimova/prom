@@ -14,6 +14,7 @@ import { CreateFormComponent } from './components/offers/create-form/create-form
 import { AuthGuard } from './components/shared/guards/auth.guard';
 import { EditFormComponent } from './components/offers/edit-form/edit-form.component';
 import { AboutUsComponent } from './components/landing/about-us/about-us.component';
+import { EditGuard } from './components/shared/guards/edit.guard';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent},

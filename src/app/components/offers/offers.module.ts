@@ -6,6 +6,7 @@ import { OfferComponent } from './offer/offer.component';
 import { RouterModule } from '@angular/router';
 import { DetailsPageComponent } from './details-page/details-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EditGuard } from '../shared/guards/edit.guard';
 
 
 
@@ -21,6 +22,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RouterModule,
     FormsModule,
     ReactiveFormsModule
+  ],
+  providers: [
+    EditGuard
   ],
   exports: [
     CreateFormComponent,

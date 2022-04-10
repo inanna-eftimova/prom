@@ -13,14 +13,9 @@ h1{
   margin: 50px auto;
 }
 .offers_title{
-  font-size: 36px;
+  font-size: 56px;
 }
 .card-text{
   color: red;
   text-align: center;
-}
-.alert.alert-info{
-  width: 80vw;
-  text-align: center;
-  margin: 50px auto;
 }
