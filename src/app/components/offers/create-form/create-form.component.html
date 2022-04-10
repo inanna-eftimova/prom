@@ -3,7 +3,7 @@
       <div class="container">
 
           <h1>Create Offerd</h1>
-          <label for="title">Hotel</label>
+          <label for="title">Hotel:</label>
           <input type="text" id="title" name="title" placeholder="Enter hotel title..." formControlName="title">
           <div *ngIf="form.controls.title.touched && form.controls.title.errors?.required" class="alert alert-danger">
             This input field is requied!

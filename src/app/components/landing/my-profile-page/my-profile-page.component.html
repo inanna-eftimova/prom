@@ -1,6 +1,7 @@
-    <div class="custom-alert" role="alert">
+ <div *ngIf="dataFromServer">
+ <div class="custom-alert" role="alert">
       ⭐  Hello, {{email}}! ⭐
-  </div>
+</div>
   <h1 class="offers_title">My Offers</h1>
   <div *ngIf="offers" class="catalog_grid">
     <div *ngFor="let offer of offers">
@@ -11,6 +12,6 @@
 
   </div>
 
-
+ </div>
 
 
