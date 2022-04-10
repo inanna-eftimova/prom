@@ -1,5 +1,9 @@
 body{
   position: relative;
   min-height: 100vh;
-  /* background-color: #f1e9ff; */
+  /* background: rgb(255,199,244);
+  background: radial-gradient(circle, rgba(255,199,244,1) 47%, rgba(247,108,255,1) 100%); */
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
 }
