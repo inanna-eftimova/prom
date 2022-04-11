@@ -8,8 +8,6 @@ import { DetailsPageComponent } from './details-page/details-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditGuard } from '../shared/guards/edit.guard';
 
-
-
 @NgModule({
   declarations: [
     EditFormComponent,

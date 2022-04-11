@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { OffersService } from 'src/app/core/service/offers-service/offers.service';
 
-
 @Component({
   selector: 'app-create-form',
   templateUrl: './create-form.component.html',

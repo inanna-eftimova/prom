@@ -2,35 +2,35 @@
   <form [formGroup]="form" id="create" (ngSubmit)="create()">
       <div class="container">
 
-          <h1>Create Offerd</h1>
+          <h1>Create Offer</h1>
           <label for="title">Hotel:</label>
           <input type="text" id="title" name="title" placeholder="Enter hotel title..." formControlName="title">
           <div *ngIf="form.controls.title.touched && form.controls.title.errors?.required" class="alert alert-danger">
-            This input field is requied!
+            This input field is required!
           </div>
 
           <label for="price">Price:</label>
           <input type="text" id="price"  name="price" min="1" placeholder="$1" formControlName="price">
           <div *ngIf="form.controls.price.touched && form.controls.price.errors?.required" class="alert alert-danger">
-            This input field is requied!
+            This input field is required!
           </div>
           <div *ngIf="form.controls.price.touched && form.controls.price.errors?.pattern" class="alert alert-danger">
-            This price field should be positive number;
+            The price must be positive number!
           </div>
 
           <label for="stars">Stars:</label>
           <input type="text" id="stars"  name="stars" min="1" placeholder="**" formControlName="stars">
           <div *ngIf="form.controls.stars.touched && form.controls.stars.errors?.required" class="alert alert-danger">
-            This input field is requied!
+            This input field is required!
           </div>
 
           <label for="img">Image:</label>
           <input appImgValidation type="text" id="imageUrl" name="imageUrl" placeholder="Upload a photo..." formControlName="img">
           <div *ngIf="form.controls.img.touched && form.controls.img.errors?.required" class="alert alert-danger">
-            This input field is requied!
+            This input field is required!
           </div> 
           <div *ngIf="form.controls.img?.touched && form.controls.img.errors?.pattern" class="alert alert-danger">
-            Invalid url!
+            The image must be in format jpg, jpeg, png, gif or bmp format!
           </div> 
 
           <label for="description">Description:</label>

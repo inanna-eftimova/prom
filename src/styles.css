@@ -26,3 +26,8 @@ h1, h2, h3, h4, h5, h6{
   font-size: 28px;
   font-family: 'Playfair Display', serif;
 }
+a, button{
+  font-family: 'Playfair Display', serif !important;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

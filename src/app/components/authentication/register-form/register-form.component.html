@@ -22,7 +22,7 @@
                     This field is required!
                   </div>
                   <div *ngIf="f.email.touched && f.email.errors?.pattern" class="alert alert-danger">
-                    Email shoud be of type: example@example.com
+                    Email must be of type: example@example.com
                   </div>
 
                   <div class="d-flex flex-row align-items-center mb-4">
@@ -36,7 +36,7 @@
                     This field is required!
                   </div>
                   <div *ngIf="f.password.touched && f.password.errors?.pattern" class="alert alert-danger">
-                    Password shoud be min 6 characters!
+                    Password must be min 6 characters!
                   </div>
 
                   <div class="d-flex flex-row align-items-center mb-4">
@@ -50,15 +50,16 @@
                     This field is required!
                   </div>
                   <div *ngIf="f.repeatPass.touched && f.repeatPass.errors?.pattern" class="alert alert-danger">
-                    Password shoud be min 6 characters!
+                    Password must be min 6 characters!
                   </div>
 
                   <div *ngIf="f.repeatPass.touched && f.password.touched && f.repeatPass.value!=f.password.value" class="alert alert-danger">
-                    Passwords shoud match!
+                    Passwords must match!
                   </div>
 
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                    <button type="submit"  [disabled]="form.invalid" class="btn btn-primary btn-lg">Register</button>
+                    <button type="submit" [disabled]="form.invalid" class="btn btn-primary btn-lg">Register</button>
+                    <!-- <button type="submit" [disabled]="form.invalid" class="btn btn-primary btn-lg btn-block">Sign in</button>  -->
                   </div>
 
                 </form>

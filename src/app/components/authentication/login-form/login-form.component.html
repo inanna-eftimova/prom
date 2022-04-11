@@ -16,7 +16,7 @@
             This field is requied!
           </div>
           <div *ngIf="f.email.touched && f.email.errors?.pattern" class="alert alert-danger">
-            Email shoud be of type: example@example.com
+            Email must be of type: example@example.com
           </div>
 
           <!-- Password input -->
@@ -28,7 +28,7 @@
             This field is requied!
           </div>
           <div *ngIf="f.password.touched && f.password.errors?.pattern" class="alert alert-danger">
-            Password shoud be min 6 characters!
+            Password must be min 6 characters!
           </div>
           <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a routerLink="/register"
             style="color: #393f81;">Register here</a></p>

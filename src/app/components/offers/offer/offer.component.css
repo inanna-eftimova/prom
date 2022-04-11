@@ -1,7 +1,8 @@
 .custom_card{
   margin: 10px;
+  background-color: transparent;
+  box-shadow:  0px 0px 14px 8px white;
 }
-
 h5{
   font-size: 28px;
 }

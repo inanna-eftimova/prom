@@ -1,0 +1,9 @@
+.spinner{
+  width: 800px;
+  margin: 40px auto;
+  text-align: center;
+}
+.spinner div{
+  width: 200px;
+  height: 200px;
+}

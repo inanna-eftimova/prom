@@ -9,10 +9,8 @@ import { NotFoundPageComponent } from './not-found-page/not-found-page.component
 import { LoginMessagePageComponent } from './login-message-page/login-message-page.component';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { FormsModule } from '@angular/forms';
-import { AlertPageComponent } from './alert-page/alert-page.component';
 import { AboutUsComponent } from './about-us/about-us.component';
-
-
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -22,14 +20,14 @@ import { AboutUsComponent } from './about-us/about-us.component';
     MyProfilePageComponent,
     NotFoundPageComponent,
     LoginMessagePageComponent,
-    AlertPageComponent,
     AboutUsComponent
   ],
   imports: [
     CommonModule,
     OffersModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule, 
+    SharedModule
   ],
   exports: [
     HomePageComponent,
