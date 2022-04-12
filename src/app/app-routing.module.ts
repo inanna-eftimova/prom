@@ -14,23 +14,26 @@ import { CreateFormComponent } from './components/offers/create-form/create-form
 import { AuthGuard } from './components/shared/guards/auth.guard';
 import { EditFormComponent } from './components/offers/edit-form/edit-form.component';
 import { AboutUsComponent } from './components/landing/about-us/about-us.component';
-import { EditGuard } from './components/shared/guards/edit.guard';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent},
+  {path: 'page', loadChildren: () => import('./components/landing/landing-routing.module')
+     .then(m => m.LandingRoutingModule)},
+  {path: 'element', loadChildren: () => import('./components/offers/offers-routing.module')
+     .then(m => m.OffersRoutingModule)},
   {path: 'login', component: LoginFormComponent},
   {path: 'register', component: RegisterFormComponent},
-  {path: 'catalog', component: LoginMessagePageComponent},
-  {path: 'about', component: AboutUsComponent},
-  {path: 'auth', children: [
-     {path: 'create', component: CreateFormComponent},
-     {path: 'search', component: SearchPageComponent},
-     {path: 'profile', component: MyProfilePageComponent},
-     {path: 'catalog', component: CatalogPageComponent},
-     {path: 'details/:id', component: DetailsPageComponent},
-     {path: 'details/:id/edit', component: EditFormComponent},
-     {path: '**', component: MyProfilePageComponent},
-  ], canActivate: [AuthGuard]},
+  // {path: 'catalog', component: LoginMessagePageComponent},
+  // {path: 'about', component: AboutUsComponent},
+  // {path: 'auth', children: [
+    //  {path: 'create', component: CreateFormComponent},
+    //  {path: 'search', component: SearchPageComponent},
+    //  {path: 'profile', component: MyProfilePageComponent},
+    //  {path: 'catalog', component: CatalogPageComponent},
+    //  {path: 'details/:id', component: DetailsPageComponent},
+    //  {path: 'details/:id/edit', component: EditFormComponent},
+    //  {path: '**', component: MyProfilePageComponent},
+  // ], canActivate: [AuthGuard]},
   {path: 'shoudLogin', component: LoginMessagePageComponent},
   {path: '**', component: NotFoundPageComponent}
 ];

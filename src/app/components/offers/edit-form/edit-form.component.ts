@@ -41,7 +41,7 @@ export class EditFormComponent implements OnInit {
   save(){
     this.offersService.updateOffer(this.form.value, this.id).subscribe(data => {
       this.toastr.success('Saved offer!', 'Success');
-      this.router.navigate([`/auth/details/${this.id}`]);
+      this.router.navigate([`/element/details/${this.id}`]);
     })
   }
 

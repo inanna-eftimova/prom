@@ -29,7 +29,7 @@ export class AuthServiceService {
            localStorage.setItem('token', token);
            localStorage.setItem('email', userdata.email)
            localStorage.setItem('uid', userdata.uid)
-           this.router.navigate(['/auth/profile']);
+           this.router.navigate(['/page/auth/profile']);
            this.toastr.success('Singed Up', 'Success');
         }
       })
@@ -48,7 +48,7 @@ export class AuthServiceService {
            localStorage.setItem('token', token);
            localStorage.setItem('email', userdata.email)
            localStorage.setItem('uid', userdata.uid)
-           this.router.navigate(['/auth/profile']);
+           this.router.navigate(['/page/auth/profile']);
            this.toastr.success('Logged In', 'Success');
         }
       })

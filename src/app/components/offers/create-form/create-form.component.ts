@@ -31,7 +31,7 @@ export class CreateFormComponent implements OnInit {
   create(){
     this.offersSevice.createOffer(this.form.value).subscribe(data => {
       this.toastr.success('Added offer!', 'Success');
-      this.router.navigate(['/auth/catalog']);
+      this.router.navigate(['/page/auth/catalog']);
     })
   }
 
