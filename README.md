@@ -11,7 +11,7 @@
 📌 Home \
 📌 About us \
 📌 Login \
-📌 Register \
+📌 Register 
 
 ### Authenticated users 🔐
 
@@ -20,7 +20,7 @@
 📌 Catalog \
 📌 Create \
 📌 Details \
-📌 Edit \
+📌 Edit 
 
 ## Technology stack
 
@@ -29,7 +29,7 @@
 🛠 HTML, CSS \
 🛠 Toastr \
 🛠 Bootstrap \
-🛠 Angular Animations \
+🛠 Angular Animations 
 
 ## Application starting
 
