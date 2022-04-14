@@ -8,28 +8,28 @@
 
 ### All users 🔓
 
-📌 Home
-📌 About us
-📌 Login
-📌 Register
+📌 Home \
+📌 About us \
+📌 Login \
+📌 Register \
 
 ### Authenticated users 🔐
 
-📌 My profile
-📌 Search
-📌 Catalog
-📌 Create
-📌 Details
-📌 Edit
+📌 My profile \
+📌 Search \
+📌 Catalog \
+📌 Create \
+📌 Details \
+📌 Edit \
 
 ## Technology stack
 
-🛠 Angular 13 (version 13.2.5)
-🛠 Firebase
-🛠 HTML, CSS
-🛠 Toastr
-🛠 Bootstrap
-🛠 Angular Animations
+🛠 Angular 13 (version 13.2.5) \
+🛠 Firebase \
+🛠 HTML, CSS \
+🛠 Toastr \
+🛠 Bootstrap \
+🛠 Angular Animations \
 
 ## Application starting
 
