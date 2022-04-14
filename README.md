@@ -20,7 +20,8 @@
 📌 Catalog \
 📌 Create \
 📌 Details \
-📌 Edit 
+📌 Edit (only if user is owner) \
+📌 Delete (only if user is owner) \
 
 ## Technology stack
 
