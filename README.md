@@ -1,27 +1,39 @@
 # DreamProm
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
+🌇 Dream Prom is a Professional catalog Platform. Here we will provide you only interesting content, which you will like very much. We're dedicated to providing you the best of catalog, with a focus on dependability and offers. We're working to turn our passion for catalog into a booming. We hope you enjoy our catalog as much as we enjoy offering them to you.
 
-## Development server
+📌 It is a project for the Angular course in Software University.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Pages and permissions
 
-## Code scaffolding
+### All users 🔓
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+📌 Home
+📌 About us
+📌 Login
+📌 Register
 
-## Build
+### Authenticated users 🔐
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+📌 My profile
+📌 Search
+📌 Catalog
+📌 Create
+📌 Details
+📌 Edit
 
-## Running unit tests
+## Technology stack
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+🛠 Angular 13 (version 13.2.5)
+🛠 Firebase
+🛠 HTML, CSS
+🛠 Toastr
+🛠 Bootstrap
+🛠 Angular Animations
 
-## Running end-to-end tests
+## Application starting
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+📌 First you must install all dependencies included in the package.json file by typing npm install in a terminal.
+Then you must serve the angular application by typing ng serve in a terminal.
+After that Books Place could be accessed on http://localhost:4200 url.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

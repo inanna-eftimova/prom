@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { DetailsPageComponent } from './details-page/details-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditGuard } from '../shared/guards/edit.guard';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { EditGuard } from '../shared/guards/edit.guard';
     CommonModule,
     RouterModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ],
   providers: [
     EditGuard

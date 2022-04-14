@@ -4,7 +4,7 @@
   <input type="search" name="search" [(ngModel)]="dataInput" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
   <button type="button" (click)="searcher()" class="btn btn-outline-primary">Search</button>
 </div>
-<h2 *ngIf="offers && dataInput!=''">Results :</h2>
+<h2>Results :</h2>
 <div *ngIf="offers" class="results">
   <div *ngFor="let offer of offers">
       <div *ngIf="offer['title'].toLowerCase().includes(dataInput.toLowerCase()) && dataInput!=''">
