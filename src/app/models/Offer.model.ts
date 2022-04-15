@@ -1,8 +1,9 @@
 export default interface Offer{
    description: string,
    img: string,
-   objectId: string,
+   id: string,
    starts: string,
    price: string,
-   title: string
+   title: string,
+   userId: string
 }

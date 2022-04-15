@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OffersService } from 'src/app/core/service/offers-service/offers.service';
+import Offer from 'src/app/models/Offer.model';
 
 @Component({
   selector: 'app-catalog-page',
@@ -7,7 +8,7 @@ import { OffersService } from 'src/app/core/service/offers-service/offers.servic
   styleUrls: ['./catalog-page.component.css']
 })
 export class CatalogPageComponent implements OnInit {
-  offers: any;
+  offers: Offer[] = [];
   dataFromServer: any;
   constructor(private offersService: OffersService) { }
 

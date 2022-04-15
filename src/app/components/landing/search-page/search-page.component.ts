@@ -11,6 +11,7 @@ export class SearchPageComponent implements OnInit {
   dataInput: string = '';
   offers: any;
   dataFromServer: any;
+  hasData: boolean = false;
   ngOnInit(): void {
   }
   searcher(){
@@ -20,6 +21,11 @@ export class SearchPageComponent implements OnInit {
         this.dataFromServer[el]['id'] = el;
       }
       this.offers = Object.values(data);
+      for (const el of this.offers) {
+        if(el['title'].toLowerCase().includes(this.dataInput.toLowerCase())){
+          this.hasData = true;
+        }
+      }
     })
   }
 }
