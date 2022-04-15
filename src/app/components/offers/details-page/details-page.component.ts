@@ -29,7 +29,7 @@ export class DetailsPageComponent implements OnInit {
   delete(){
     this.offersService.deleteOffer(this.dataId).subscribe(data => {
       this.toastr.success('Delete offer!', 'Success');
-      this.router.navigate(['/auth/catalog']);
+      this.router.navigate(['/page/auth/catalog']);
     })
   }
 
