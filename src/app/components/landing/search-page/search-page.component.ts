@@ -12,7 +12,6 @@ export class SearchPageComponent implements OnInit {
   offers: any;
   dataFromServer: any;
   ngOnInit(): void {
-    
   }
   searcher(){
     this.offersServise.getAllOffers().subscribe(data => {

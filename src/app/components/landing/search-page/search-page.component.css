@@ -16,3 +16,7 @@ h2{
   text-align: center;
   font-size: 38px;
 }
+.container{
+  height: 98vh;
+  overflow-y: hidden;
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
