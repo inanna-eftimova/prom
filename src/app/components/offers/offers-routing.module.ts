@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DetailsPageComponent } from './details-page/details-page.component';
 import { EditFormComponent } from './edit-form/edit-form.component';
 import { CreateFormComponent } from './create-form/create-form.component';
-import { AuthGuard } from '../shared/guards/auth.guard';
+import { AuthGuard } from '../../core/service/guards/auth.guard';
 import { MyProfilePageComponent } from '../landing/my-profile-page/my-profile-page.component';
 
 const routes: Routes = [

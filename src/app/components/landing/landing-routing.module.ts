@@ -5,7 +5,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { SearchPageComponent } from './search-page/search-page.component';
 import { MyProfilePageComponent } from './my-profile-page/my-profile-page.component';
 import { CatalogPageComponent } from './catalog-page/catalog-page.component';
-import { AuthGuard } from '../shared/guards/auth.guard';
+import { AuthGuard } from '../../core/service/guards/auth.guard';
 import { LoginMessagePageComponent } from './login-message-page/login-message-page.component';
 
 const routes: Routes = [

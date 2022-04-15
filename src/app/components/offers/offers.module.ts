@@ -6,7 +6,6 @@ import { OfferComponent } from './offer/offer.component';
 import { RouterModule } from '@angular/router';
 import { DetailsPageComponent } from './details-page/details-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { EditGuard } from '../shared/guards/edit.guard';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
@@ -22,9 +21,6 @@ import { SharedModule } from '../shared/shared.module';
     FormsModule,
     ReactiveFormsModule,
     SharedModule
-  ],
-  providers: [
-    EditGuard
   ],
   exports: [
     CreateFormComponent,
